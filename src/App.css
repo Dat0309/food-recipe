@@ -1,0 +1,226 @@
+body {
+  margin: 0;
+  font-family: "Josefin Sans", sans-serif;
+  /* font-family: 'Open Sans', sans-serif; */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 17px;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Header */
+.header {
+  background-color: #f3f4ed;
+  position: fixed;
+  z-index: 50;
+  padding: 0.75rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  width: 100vw;
+  display: flex;
+}
+
+.header-logo {
+  position: relative;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.header-logo-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: black;
+  pointer-events: none;
+}
+
+.img-logo {
+  object-fit: cover;
+  width: 3rem;
+}
+
+.header-slider {
+  display: flex;
+  gap: 2rem;
+}
+
+.header-motion {
+  display: flex;
+  align-items: center;
+  gap: 6rem;
+}
+
+.header-home,
+.header-aboutus,
+.header-menu,
+.header-service,
+.header-cart {
+  display: flex;
+  position: relative;
+  width: max-content;
+  color: #536162;
+}
+
+.header-home:hover,
+.header-aboutus:hover,
+.header-menu:hover,
+.header-service:hover,
+.header-cart:hover,
+.header-user:hover {
+  transition-property: all;
+  transition-duration: 100ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  cursor: pointer;
+  color: #424642;
+}
+
+.header-cart i {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  cursor: pointer;
+}
+
+.header-user-avatar {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 9999px;
+  cursor: pointer;
+  filter: drop-shadow(0 20px 13px rgba(0, 0, 0, 0.03))
+    drop-shadow(0 8px 5px rgba(0, 0, 0, 0.08));
+}
+
+.header-user-menu {
+  display: flex;
+  position: absolute;
+  right: 0;
+  top: 3rem;
+  background-color: #f9fafb;
+  flex-direction: column;
+  width: 10rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.user-menu-link {
+  text-decoration: none;
+}
+
+.header-user-menu-new,
+.header-user-menu-logout {
+  display: flex;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  width: max-content;
+  align-items: center;
+  gap: 0.55rem;
+  color: #536162;
+}
+
+.header-user-menu-new:hover,
+.header-user-menu-logout:hover {
+  display: flex;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  transition-property: all;
+  transition-duration: 100ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  font-size: 1rem;
+  line-height: 1.5rem;
+  align-items: center;
+  cursor: pointer;
+  gap: 0.75rem;
+  width: max-content;
+  color: #424642;
+}
+
+@media (min-width: 768px) {
+  .header-mobile {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .header-logo {
+    display: none;
+  }
+
+  .header-logo-link {
+    display: none;
+  }
+
+  .header-slider {
+    display: none;
+  }
+  .header-mobile {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+
+  .header-logo-mobile {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .header-logo-link-mobile {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .img-logo-mobile {
+    object-fit: cover;
+    width: 2rem;
+  }
+
+  .header-user-mobile {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .header-user-home-mobile,
+  .header-user-recipe-mobile,
+  .header-user-menu-mobile,
+  .header-user-menu-about-mobile,
+  .header-user-service-mobile {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    cursor: pointer;
+  }
+
+  .header-user-home-mobile:hover,
+  .header-user-recipe-mobile:hover,
+  .header-user-menu-mobile:hover,
+  .header-user-menu-about-mobile:hover,
+  .header-user-service-mobile:hover {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    transition-property: all;
+    transition-duration: 100ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    font-size: 1rem;
+    line-height: 1.5rem;
+    cursor: pointer;
+  }
+}
